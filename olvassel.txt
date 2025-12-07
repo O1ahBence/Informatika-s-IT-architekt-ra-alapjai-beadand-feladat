@@ -2,7 +2,7 @@ Készítő neve:
 Oláh Bence Péter
 
 Működő weboldal URL címe:
-https://o1ahbence.github.io/Informatika-s-IT-architekt-ra-alapjai-beadand-feladat/kalkulator.html
+https://o1ahbence.github.io/Informatika-s-IT-architekt-ra-alapjai-beadand-feladat/
 
 A weboldal témájának rövid leírása:
 Ez a weboldal egy drónfotós vállalkozás portfólióját mutatja be, amely lehetővé teszi a látogatók számára a referenciamunkák megtekintését és a szolgáltatások böngészését. Az oldal interaktív funkciókat is kínál, beleértve egy árkalkulátort a becsült költségek számításához és egy validált kapcsolatfelvételi űrlapot.
