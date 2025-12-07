@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBP - Kapcsolat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stilus.css"> 
+    <link rel="icon" href="img/favic.png" type="image/x-icon">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="tarolo fejlec-tartalom">
+            <div class="logo"><h1>OBP</h1></div>
+            <nav>
+                <ul class="menulista">
+                    <li><a href="index.html">Kezdőlap</a></li>
+                    <li><a href="rolam.html">Rólam</a></li> 
+                    <li><a href="galeria.html">Galéria</a></li>
+                    <li><a href="arak.html">Árcsomagok</a></li>
+                    <li><a href="kalkulator.html">Kalkulátor</a></li> 
+                    <li><a href="kapcsolat.html" class="aktiv">Kapcsolat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="szekcio-terkoz hatterszin-sotet">
+            <div class="tarolo">
+                <h2 class="szekcio-cim szoveg-feher">Kapcsolatfelvétel</h2>
+                
+                <form id="kapcsolatUrlap" action="#" method="POST" novalidate>
+                    <div class="urlap-csoport">
+                        <label for="nev">Teljes Név:</label>
+                        <input type="text" id="nev" name="nev" placeholder="Pl. Kiss János">
+                        <span class="hiba-uzenet" id="hiba-nev"></span>
+                    </div>
+
+                    <div class="urlap-csoport">
+                        <label for="email">Email Cím:</label>
+                        <input type="email" id="email" name="email" placeholder="pelda@email.hu">
+                        <span class="hiba-uzenet" id="hiba-email"></span>
+                    </div>
+
+                    <div class="urlap-csoport">
+                        <label for="telefon">Telefonszám:</label>
+                        <input type="tel" id="telefon" name="telefon" placeholder="+36 30 123 4567">
+                        <span class="hiba-uzenet" id="hiba-telefon"></span>
+                    </div>
+
+                    <div class="urlap-csoport">
+                        <label for="datum">Tervezett időpont:</label>
+                        <input type="date" id="datum" name="datum">
+                        <span class="hiba-uzenet" id="hiba-datum"></span>
+                    </div>
+
+                    <div class="urlap-csoport">
+                        <label for="szolgaltatas">Érdeklődés tárgya:</label>
+                        <select id="szolgaltatas" name="szolgaltatas">
+                            <option value="">Válasszon szolgáltatást...</option>
+                            <option value="foto">Alap csomag</option>
+                            <option value="video">Prémium csomag</option>
+                            <option value="full">Profi csomag</option>
+                        </select>
+                        <span class="hiba-uzenet" id="hiba-szolgaltatas"></span>
+                    </div>
+
+                    <div class="urlap-csoport">
+                        <label>Helyszín jellege:</label>
+                        <div class="radio-csoport">
+                            <input type="radio" id="lakott" name="helyszin_tipus" value="lakott" checked>
+                            <label for="lakott">Lakó övezet</label>
+                            
+                            <input type="radio" id="egyeb" name="helyszin_tipus" value="egyeb">
+                            <label for="egyeb">Egyéb</label>
+                        </div>
+                    </div>
+
+                    <div class="urlap-csoport">
+                        <label for="uzenet">Üzenet:</label>
+                        <textarea id="uzenet" name="uzenet" rows="5" placeholder="Írja le részletesen az igényeit..."></textarea>
+                         <span class="hiba-uzenet" id="hiba-uzenet"></span>
+                    </div>
+
+                    <button type="submit" class="gomb gomb-kuldes">Küldés</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="tarolo lablec-tartalom">
+            <p>&copy; 2025 OBP. Készítette: Oláh Bence Péter</p>
+        </div>
+    </footer>
+</body>
+</html>

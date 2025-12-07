@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBP - Kalkulátor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stilus.css"> 
+    <link rel="icon" href="img/favic.png" type="image/x-icon">
+    <script src="js/program.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="tarolo fejlec-tartalom">
+            <div class="logo"><h1>OBP</h1></div>
+            <nav>
+                <ul class="menulista">
+                    <li><a href="index.html">Kezdőlap</a></li>
+                    <li><a href="rolam.html">Rólam</a></li> 
+                    <li><a href="galeria.html">Galéria</a></li>
+                    <li><a href="arak.html">Árcsomagok</a></li>
+                    <li><a href="kalkulator.html" class="aktiv">Kalkulátor</a></li> 
+                    <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="szekcio-terkoz hatterszin-vilagos">
+            <div class="tarolo">
+                <h2 class="szekcio-cim">Drón Szolgáltatás Kalkulátor</h2>
+                <p style="text-align: center;">Számolja ki a becsült költséget programunkkal!</p>
+                
+                <div class="szamologep-doboz">
+                    <div class="szamolo-sor">
+                        <label for="szamolo-terulet">Terület mérete (m²):</label>
+                        <input type="number" id="szamolo-terulet" value="100" min="50">
+                    </div>
+                    <div class="szamolo-sor">
+                        <label for="szamolo-tipus">Ingatlan típusa:</label>
+                        <select id="szamolo-tipus">
+                            <option value="1">Családi ház</option>
+                            <option value="1.5">Ipari ingatlan (+50%)</option>
+                            <option value="2">Rendezvény (+100%)</option>
+                        </select>
+                    </div>
+                    <div class="szamolo-sor">
+                        <label>Extrák:</label>
+                        <div class="pipa-csoport">
+                            <input type="checkbox" id="opcio-video" value="30000">
+                            <label for="opcio-video">Videó vágás (+30.000 Ft)</label>
+                        </div>
+                        <div class="pipa-csoport">
+                            <input type="checkbox" id="opcio-nyers" value="15000">
+                            <label for="opcio-nyers">RAW képek átadása (+15.000 Ft)</label>
+                        </div>
+                    </div>
+                    <button id="szamolas-gomb" class="gomb-szamolo">Számolás</button>
+                    <div id="szamolas-eredmeny" class="eredmeny-doboz">Becsült ár: 0 Ft</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="tarolo lablec-tartalom">
+            <p>&copy; 2025 OBP. Készítette: Oláh Bence Péter</p>
+        </div>
+    </footer>
+</body>
+</html>

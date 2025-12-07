@@ -1,0 +1,407 @@
+/* =========================================
+   1. ALAPBEÁLLÍTÁSOK ÉS VÁLTOZÓK
+   ========================================= */
+:root {
+    --fo-szin: #3498db;
+    --masodlagos-szin: #2c3e50;
+    --kiemelo-szin: #e74c3c;
+    --vilagos-hatter: #ecf0f1;
+    --sotet-hatter: #2c3e50;
+    --szoveg-szin: #333;
+    --feher: #ffffff;
+    --kartya-arnyek: 0 10px 20px rgba(0,0,0,0.1); 
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'TASA Explorer', sans-serif;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--szoveg-szin);
+    font-size: 16px; 
+}
+
+.tarolo {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.szekcio-terkoz {
+    padding: 60px 0;
+}
+
+.szekcio-cim {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--masodlagos-szin);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Háttér segédosztályok */
+.hatterszin-vilagos { background-color: var(--vilagos-hatter); }
+.hatterszin-sotet { background-color: var(--sotet-hatter); color: var(--feher); }
+.szoveg-feher { color: var(--feher); }
+
+/* =========================================
+   2. FEJLÉC ÉS MENÜ
+   ========================================= */
+header {
+    background-color: var(--masodlagos-szin);
+    color: var(--feher);
+    padding: 1rem 0;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.fejlec-tartalom {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--feher);
+}
+
+.menulista {
+    list-style: none; 
+    display: flex;
+    gap: 20px; 
+}
+
+.menulista a {
+    text-decoration: none;
+    color: var(--feher);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menulista a:hover {
+    color: var(--fo-szin);
+}
+
+/* =========================================
+   3. BORÍTÓ (HERO) RÉSZ
+   ========================================= */
+.borito-resz {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-color: #555; 
+    height: 80vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--feher);
+}
+
+.borito-szoveg h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.gomb {
+    display: inline-block;
+    background-color: var(--fo-szin);
+    color: var(--feher);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.gomb:hover {
+    background-color: #2980b9;
+}
+
+/* =========================================
+   4. RÓLAM RÉSZ
+   ========================================= */
+.rolam-doboz {
+    display: flex;
+    align-items: center; 
+    gap: 50px; 
+}
+
+.rolam-kep {
+    flex: 1; 
+    text-align: center;
+}
+
+.rolam-kep img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover; 
+    border: 5px solid var(--fo-szin);
+    box-shadow: var(--kartya-arnyek);
+}
+
+.rolam-szoveg {
+    flex: 1;
+}
+
+.rolam-szoveg h3 {
+    margin-bottom: 15px;
+    color: var(--fo-szin);
+    font-size: 1.5rem;
+}
+
+.rolam-szoveg p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.kepesseg-lista {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.kepesseg-lista li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border-left: 3px solid var(--fo-szin);
+    padding-left: 10px;
+}
+
+/* =========================================
+   5. GALÉRIA STÍLUSOK
+   ========================================= */
+.galeria-racs {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria-elem {
+    flex: 1 1 300px; 
+    background: var(--feher);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.galeria-elem:hover {
+    transform: translateY(-5px);
+}
+
+.galeria-elem img {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+.galeria-elem figcaption {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--masodlagos-szin);
+}
+
+/* =========================================
+   6. ÁRCSOMAGOK (KÁRTYÁK)
+   ========================================= */
+.ar-kartya-tarolo {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch; 
+    flex-wrap: wrap;
+}
+
+.csomag-kartya {
+    background: var(--feher);
+    border-radius: 10px;
+    box-shadow: var(--kartya-arnyek);
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 380px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column; 
+}
+
+.csomag-kartya:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.csomag-kartya.kiemelt {
+    border: 2px solid var(--fo-szin);
+    transform: scale(1.05); 
+    position: relative;
+    z-index: 1;
+}
+
+.csomag-kartya.kiemelt:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.kartya-fejlec {
+    background-color: var(--vilagos-hatter);
+    padding: 30px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.csomag-kartya.kiemelt .kartya-fejlec {
+    background-color: var(--fo-szin);
+    color: var(--feher);
+}
+
+.kartya-fejlec h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.ar {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--masodlagos-szin);
+}
+
+.csomag-kartya.kiemelt .ar {
+    color: var(--feher);
+}
+
+.cimke {
+    display: inline-block;
+    background-color: var(--kiemelo-szin);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.kartya-torzs {
+    padding: 30px 20px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kartya-torzs ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.kartya-torzs ul li {
+    margin-bottom: 12px;
+    color: #666;
+}
+
+.kartya-torzs ul li.nem-elerheto {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.gomb-korvonalas {
+    background-color: transparent;
+    border: 2px solid var(--fo-szin);
+    color: var(--fo-szin);
+}
+
+.gomb-korvonalas:hover {
+    background-color: var(--fo-szin);
+    color: var(--feher);
+}
+
+/* =========================================
+   7. KALKULÁTOR
+   ========================================= */
+.szamologep-doboz {
+    background-color: var(--feher);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--kartya-arnyek);
+    max-width: 500px;
+    margin: 0 auto;
+    border-top: 5px solid var(--fo-szin);
+}
+
+.szamolo-sor { margin-bottom: 15px; }
+.pipa-csoport { display: flex; align-items: center; gap: 10px; margin-bottom: 5px; }
+.eredmeny-doboz {
+    margin-top: 20px; padding: 15px; background-color: var(--masodlagos-szin);
+    color: var(--feher); font-size: 1.5rem; text-align: center;
+    border-radius: 5px; font-weight: bold;
+}
+.gomb-szamolo {
+    background-color: var(--masodlagos-szin); color: var(--feher); border: none;
+    padding: 10px 20px; width: 100%; border-radius: 5px; cursor: pointer;
+    font-size: 1.1rem; transition: background 0.2s;
+}
+.gomb-szamolo:hover { background-color: #34495e; }
+
+/* =========================================
+   8. KAPCSOLAT ŰRLAP
+   ========================================= */
+form {
+    background: var(--feher);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 700px;
+    margin: 0 auto; 
+}
+
+.urlap-csoport { margin-bottom: 20px; }
+label { display: block; margin-bottom: 5px; font-weight: bold; color: var(--masodlagos-szin); }
+
+input[type="text"], input[type="email"], input[type="tel"],
+input[type="date"], input[type="number"], select, textarea {
+    width: 100%; padding: 10px; border: 1px solid #ccc;
+    border-radius: 4px; font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none; border-color: var(--fo-szin);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.radio-csoport label { display: inline; margin-right: 15px; font-weight: normal; }
+.gomb-kuldes { width: 100%; font-size: 1.1rem; }
+.hiba-uzenet { color: var(--kiemelo-szin); font-size: 0.85rem; margin-top: 5px; display: block; min-height: 1.2em; }
+.beviteli-hiba { border-color: var(--kiemelo-szin)!important; background-color: #fde8e7; }
+
+/* =========================================
+   9. MOBIL NÉZET
+   ========================================= */
+@media (max-width: 768px) {
+  .fejlec-tartalom { flex-direction: column; text-align: center; }
+  .menulista { margin-top: 15px; flex-direction: column; gap: 10px; }
+  .borito-szoveg h2 { font-size: 1.8rem; }
+  .ar-kartya-tarolo { flex-direction: column; align-items: center; }
+  .csomag-kartya.kiemelt { transform: scale(1); margin: 20px 0; }
+  .rolam-doboz { flex-direction: column; text-align: center; }
+  .rolam-szoveg h2 { text-align: center!important; }
+  .kepesseg-lista { display: inline-block; text-align: left; }
+}

@@ -1,0 +1,40 @@
+# OBP - Drónfotózás és Videózás Weboldal
+
+Ez a projekt egy statikus weboldal, amelyet Oláh Bence Péter drónfotós portfóliójának bemutatására terveztek.
+Az oldal modern, reszponzív felülettel rendelkezik, bemutatja a referenciamunkákat, szolgáltatásokat,
+és interaktív funkciókat (kalkulátor, űrlap) kínál a látogatóknak.
+
+## 📂 Könyvtárszerkezet
+
+A projekt fájljai az alábbi hierarchia szerint vannak rendezve a `Weboldal` mappán belül. 
+A weboldal működéséhez elengedhetetlen ennek a szerkezetnek a betartása,
+mivel a fájlok relatív elérési útvonalakkal (pl. `../css/stilus.css`) hivatkoznak egymásra.
+
+
+Weboldal/
+│
+├── css/
+│   └── stilus.css       # A weboldal kinézete és stílusai
+│
+├── html/
+│   ├── index.html       # Kezdőlap (Nyitóoldal)
+│   ├── rolam.html       # Bemutatkozás
+│   ├── galeria.html     # Képgaléria
+│   ├── arak.html        # Szolgáltatási csomagok
+│   ├── kalkulator.html  # Interaktív árkalkulátor felület
+│   └── kapcsolat.html   # Kapcsolatfelvételi űrlap
+│
+├── img/
+│   ├── favic.png        # Favicon ikon
+│   ├── hero.jpeg        # Háttérkép a kezdőlaphoz
+│   ├── rolam.JPG        # Profilkép
+│   ├── galeria.1.jpg    # Referencia kép
+│   ├── galeria.2.JPG    # Referencia kép
+│   ├── galeria.3.JPG    # Referencia kép
+│   └── galeria.4.JPG    # Referencia kép
+│
+├── js/
+│   ├── main.js          # A kapcsolat űrlap validációja és működése
+│   └── program.js       # Az árkalkulátor logikája
+│
+└── README.md            # Ez a fájl
