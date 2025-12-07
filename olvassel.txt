@@ -1,40 +1,23 @@
-# OBP - Drónfotózás és Videózás Weboldal
+Készítő neve:
+Oláh Bence Péter
 
-Ez a projekt egy statikus weboldal, amelyet Oláh Bence Péter drónfotós portfóliójának bemutatására terveztek.
-Az oldal modern, reszponzív felülettel rendelkezik, bemutatja a referenciamunkákat, szolgáltatásokat,
-és interaktív funkciókat (kalkulátor, űrlap) kínál a látogatóknak.
+Működő weboldal URL címe:
+https://o1ahbence.github.io/Informatika-s-IT-architekt-ra-alapjai-beadand-feladat/kalkulator.html
 
-## 📂 Könyvtárszerkezet
+A weboldal témájának rövid leírása:
+Ez a weboldal egy drónfotós vállalkozás portfólióját mutatja be, amely lehetővé teszi a látogatók számára a referenciamunkák megtekintését és a szolgáltatások böngészését. Az oldal interaktív funkciókat is kínál, beleértve egy árkalkulátort a becsült költségek számításához és egy validált kapcsolatfelvételi űrlapot.
 
-A projekt fájljai az alábbi hierarchia szerint vannak rendezve a `Weboldal` mappán belül. 
-A weboldal működéséhez elengedhetetlen ennek a szerkezetnek a betartása,
-mivel a fájlok relatív elérési útvonalakkal (pl. `../css/stilus.css`) hivatkoznak egymásra.
+Saját JavaScript kód helye és működése:
+A projekt két különálló JavaScript fájlt tartalmaz a 'js' mappában:
+1. js/program.js (a kalkulator.html-hez csatolva): Ez a script végzi az árkalkulációt. Figyeli a beviteli mezők (terület, típus, extrák) változását, és a "Számolás" gomb megnyomására kiszámítja a végösszeget a megadott konstansok és szorzók alapján, majd megjeleníti azt a felhasználónak.
+2. js/main.js (a kapcsolat.html-hez csatolva): Ez a script felel az űrlap validációjáért. A "Küldés" gomb megnyomásakor ellenőrzi, hogy minden kötelező mező (név, email, telefon, dátum) ki van-e töltve, és megfelelő formátumú-e az email cím. Hiba esetén vizuális visszajelzést ad a megfelelő mezőnél.
 
+Használt egyedi fonttípus és annak helye:
+A weboldal a Google Fonts szolgáltatást használja.
+- Fontok nevei: 'Jura' és 'TASA Explorer'.
+- Helye: A HTML fájlok <head> részében található <link> elemen keresztül kerülnek betöltésre, a 'css/stilus.css' fájlban pedig a 'body' szelektorra vannak alkalmazva (font-family: 'TASA Explorer', sans-serif;).
 
-Weboldal/
-│
-├── css/
-│   └── stilus.css       # A weboldal kinézete és stílusai
-│
-├── html/
-│   ├── index.html       # Kezdőlap (Nyitóoldal)
-│   ├── rolam.html       # Bemutatkozás
-│   ├── galeria.html     # Képgaléria
-│   ├── arak.html        # Szolgáltatási csomagok
-│   ├── kalkulator.html  # Interaktív árkalkulátor felület
-│   └── kapcsolat.html   # Kapcsolatfelvételi űrlap
-│
-├── img/
-│   ├── favic.png        # Favicon ikon
-│   ├── hero.jpeg        # Háttérkép a kezdőlaphoz
-│   ├── rolam.JPG        # Profilkép
-│   ├── galeria.1.jpg    # Referencia kép
-│   ├── galeria.2.JPG    # Referencia kép
-│   ├── galeria.3.JPG    # Referencia kép
-│   └── galeria.4.JPG    # Referencia kép
-│
-├── js/
-│   ├── main.js          # A kapcsolat űrlap validációja és működése
-│   └── program.js       # Az árkalkulátor logikája
-│
-└── README.md            # Ez a fájl
+Felhasznált külső források:
+- Betűtípusok: Google Fonts (fonts.google.com)
+- Ikonok és képek: Saját fotók és illusztrációk, https://favicon.io/
+- Technikai segítség: Generatív AI.
